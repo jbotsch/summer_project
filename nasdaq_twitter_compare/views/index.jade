@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='Michael Herman')
+    link(href='http://netdna.bootstrapcdn.com/bootswatch/3.1.0/yeti/bootstrap.min.css', rel='stylesheet', media='screen')
+    link(href='/stylesheets/main.css', rel='stylesheet', media='screen')
+  body
+    .container
+      .jumbotron
+        h1 Welcome to NASDAQ-OMX TwitterPulse
+        p.lead Use Twitter sentiment analysis.
+        br
+        br
+        .form-container
+          form(action='', method='post')
+            input#choice1.choice(type='text', data-choice='1', placeholder='Enter the name of your company...', name='choice1')
+            input#choice2.choice(type='text', data-choice='2', placeholder='Enter your stock ticker...', name='choice2')
+            input#decision.btn.btn-success.btn-lg(type='submit', value='Decide!')
+        br
+        br
+        .decision-container
+          p#status
+          p#decision-text
+          P#status
+          p#score
+           p#decision-text-2
+          p#score-2
+          input#again.btn.btn-success.btn-lg(value='Again?')
+    script(src='http://code.jquery.com/jquery-1.11.0.min.js')
+    script(src='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js')
+    script(src='javascripts/main.js')
